@@ -17,7 +17,12 @@ class EmployeeContainer extends Component {
     // Load all employees
     loadEmployees = () => {
         API.employees()
-        .then(res => this.setState({ result: res.data.results }))
+        .then(res => {
+
+        console.log(res);
+        this.setState({ result: res.data.results })
+
+        })
         .catch(err => console.log(err))
     }
 
@@ -41,11 +46,9 @@ class EmployeeContainer extends Component {
                             <th scope="col">DOB</th>
                         </tr>
                     </thead>
-                    <tbody>
                         <Employee
                             result={this.state.result}
                         />
-                    </tbody>
                 </table>
             </div>
         )
