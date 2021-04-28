@@ -1,9 +1,9 @@
 import axios from "axios";
 
 export default {
-    searchTerms: function(query) {
+    searchTerms: function() {
         return axios.get(
-            "https://randomuser.me/api/?results=10"
+            "https://randomuser.me/api/?results=100&nat=us"
         );
     }
 };
