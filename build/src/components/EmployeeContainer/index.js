@@ -1,18 +1,12 @@
 import React, { Component } from "react";
-// import Container from "./Container";
-// import Row from "./Row";
-// import Col from "./Col";
-// import Card from "./Card";
-// import SearchForm from "./SearchForm";
-// import MovieDetail from "./MovieDetail";
 import API from "../../utils/API";
+import Employee from "../Employee";
 
 
 class EmployeeContainer extends Component {
     state = {
         result: [],
         search: "",
-        order: "",
     };
 
     // When the component mounts, load all of the employees
@@ -22,7 +16,7 @@ class EmployeeContainer extends Component {
 
     // Load all employees
     loadEmployees = () => {
-        API.get()
+        API.employees()
         .then(res => this.setState({ result: res.data.results }))
         .catch(err => console.log(err))
     }
@@ -35,6 +29,31 @@ class EmployeeContainer extends Component {
 
     // render as a table
     render() {
-        return 
+        return (
+            <div>
+                <table className="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">DOB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{this.state.image}</th>
+                            <th scope="row">{this.state.name}</th>
+                            <th scope="row">{this.state.phone}</th>
+                            <th scope="row">{this.state.email}</th>
+                            <th scope="row">{this.state.dob}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        )
     }
 }
+
+export default EmployeeContainer;
