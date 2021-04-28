@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Employee from "../Employee";
+import Search from "../Search";
 
 
 class EmployeeContainer extends Component {
@@ -26,21 +27,58 @@ class EmployeeContainer extends Component {
         .catch(err => console.log(err))
     }
 
-    // toggle ascending/descending
-    handleSubmit = event => {
+
+    handleChange = event => {
         event.preventDefault()
-        // more code here...
+        this.setState({search: event.target.value});
+    }
+
+    handleSort = (event, type) => {
+        if (type === "asc") {
+            let ascending = this.state.result.sort((a, b) => {
+                if (a.name.last < b.name.last) {
+                    return -1
+                }
+                else {
+                    return 1
+                }
+            })
+            this.setState({ result: ascending })
+        }
+        else if (type === "dsc") {
+            let descending = this.state.result.sort((a, b) => {
+                if (a.name.last > b.name.last) {
+                    return -1
+                }
+                else {
+                    return 1
+                }
+            })
+            this.setState({ result: descending })
+        }
+
+        
     }
 
     // render as a table
     render() {
         return (
             <div>
+                <Search search={this.state.search} handleChange={this.handleChange}/>
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Image</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">Name
+                                {/* <div className="dropdown">
+                                    <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    </button>
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
+                                    <a className="dropdown-item" href="#" onClick={ (event) => this.handleSort(event, "asc")}>Ascending</a>
+                                     <a className="dropdown-item" href="#" onClick={ (event) => this.handleSort(event, "dsc")}>Descending</a>
+                                    {/* </div>
+                                </div>  */}
+                            </th>
                             <th scope="col">Phone</th>
                             <th scope="col">Email</th>
                             <th scope="col">DOB</th>
@@ -48,6 +86,7 @@ class EmployeeContainer extends Component {
                     </thead>
                         <Employee
                             result={this.state.result}
+                            search={this.state.search}
                         />
                 </table>
             </div>

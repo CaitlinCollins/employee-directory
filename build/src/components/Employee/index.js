@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 function Employee(props) {
 return (
     <tbody>
-        {props.result.map(results => (
+        {props.result.filter(employee => employee.name.last.includes(props.search)).map(results => (
         <tr key={results.login.uuid}>
             <td><img alt="thumbnail" src={results.picture.thumbnail}/></td>
             <td>{results.name.first} {results.name.last}</td>
