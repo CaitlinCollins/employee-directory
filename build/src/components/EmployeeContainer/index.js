@@ -42,13 +42,9 @@ class EmployeeContainer extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">{this.state.image}</th>
-                            <th scope="row">{this.state.name}</th>
-                            <th scope="row">{this.state.phone}</th>
-                            <th scope="row">{this.state.email}</th>
-                            <th scope="row">{this.state.dob}</th>
-                        </tr>
+                        <Employee
+                            result={this.state.result}
+                        />
                     </tbody>
                 </table>
             </div>
