@@ -28,7 +28,7 @@
   
   ## Screenshot
  
-  ![screenshot](https://github.com/CaitlinCollins/employee-directory/blob/main/build/public/screenshot.png)
+  ![screenshot](https://github.com/CaitlinCollins/employee-directory/blob/main/public/screenshot.png)
   
   ## Contributing
   No specified contribution information. 
