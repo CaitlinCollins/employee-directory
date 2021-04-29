@@ -1,5 +1,5 @@
 import React from "react";
-import FormatDate from "../FormatDate";
+import FormatDate from "../../utils/FormatDate";
 
 
 function Employee(props) {

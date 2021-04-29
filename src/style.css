@@ -1,5 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(241, 241, 247);
+  background-color: rgb(244, 241, 245);
 }
