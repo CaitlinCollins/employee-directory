@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CaitlinCollins/employee-directory/static/css/main.f6154424.chunk.css",
+    "main.js": "/CaitlinCollins/employee-directory/static/js/main.5dd6e52d.chunk.js",
+    "main.js.map": "/CaitlinCollins/employee-directory/static/js/main.5dd6e52d.chunk.js.map",
+    "runtime-main.js": "/CaitlinCollins/employee-directory/static/js/runtime-main.a5fcd63c.js",
+    "runtime-main.js.map": "/CaitlinCollins/employee-directory/static/js/runtime-main.a5fcd63c.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/CaitlinCollins/employee-directory/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.944a51b4.chunk.js": "/CaitlinCollins/employee-directory/static/js/2.944a51b4.chunk.js",
+    "static/js/2.944a51b4.chunk.js.map": "/CaitlinCollins/employee-directory/static/js/2.944a51b4.chunk.js.map",
+    "index.html": "/CaitlinCollins/employee-directory/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/CaitlinCollins/employee-directory/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.f6154424.chunk.css.map": "/CaitlinCollins/employee-directory/static/css/main.f6154424.chunk.css.map",
+    "static/js/2.944a51b4.chunk.js.LICENSE.txt": "/CaitlinCollins/employee-directory/static/js/2.944a51b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5fcd63c.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.944a51b4.chunk.js",
+    "static/css/main.f6154424.chunk.css",
+    "static/js/main.5dd6e52d.chunk.js"
+  ]
+}
