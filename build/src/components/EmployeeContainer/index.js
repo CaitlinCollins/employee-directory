@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Employee from "../Employee";
 import Search from "../Search";
-
+import './style.css';
 
 class EmployeeContainer extends Component {
     state = {
@@ -69,15 +69,15 @@ class EmployeeContainer extends Component {
                     <thead>
                         <tr>
                             <th scope="col">Image</th>
-                            <th scope="col">Name
-                                {/* <div className="dropdown">
+                            <th scope="col" className="name">Name
+                                <span className="dropdown">
                                     <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     </button>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton"> */}
+                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a className="dropdown-item" href="#" onClick={ (event) => this.handleSort(event, "asc")}>Ascending</a>
                                      <a className="dropdown-item" href="#" onClick={ (event) => this.handleSort(event, "dsc")}>Descending</a>
-                                    {/* </div>
-                                </div>  */}
+                                    </div>
+                                </span>
                             </th>
                             <th scope="col">Phone</th>
                             <th scope="col">Email</th>
