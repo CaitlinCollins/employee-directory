@@ -1,4 +1,5 @@
 import React from "react";
+import FormatDate from "../FormatDate";
 
 
 function Employee(props) {
@@ -10,7 +11,7 @@ return (
             <td>{results.name.first} {results.name.last}</td>
             <td>{results.phone}</td>
             <td>{results.email}</td>
-            <td>{results.dob.date}</td> 
+            <td>{FormatDate(results.dob.date)}</td> 
         </tr>
         ))}
     </tbody>
