@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
  
   ## Link to Deployed Application
+  https://caitlincollins.github.io/employee-directory/
 
    
   ## Table of Contents
